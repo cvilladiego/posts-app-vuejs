@@ -41,7 +41,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
    <LoadingComponent v-if="loading"/>
   <div class="container" v-else>
     <h1>APP</h1>
-    <h3>Favorito: {{ favorito }}</h3>
+    <h3>Favorito: <span class="fst-italic text-success">{{ favorito }}</span></h3>
     <PaginatePost @next="next" @prev="prev" :inicio="inicio" :fin="fin" :maxLength="posts.length"/>
     <BlogsPost v-for="post of posts.slice(inicio, fin)"
       :key="post.id" :title="post.title"
